@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Долги AI — премиальный чат</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="burger" title="История чатов">☰</button>
+
+<div id="overlay" class="hidden"></div>
+
+<aside id="sidebar" class="hidden">
+  <div class="side-head">
+    <span class="brand">✦ ДОЛГИ AI ✦</span>
+    <button id="new-chat">＋ Новый чат</button>
+  </div>
+  <div id="chat-list"></div>
+  <div id="storage-warning" class="hidden">Браузер не сохраняет чаты для файлов с компьютера. Используйте кнопки ниже для резервных копий.</div>
+  <div class="side-actions">
+    <button id="save-chats">💾 Сохранить чаты</button>
+    <button id="load-chats">📂 Загрузить</button>
+  </div>
+</aside>
+
+<main id="chat-window">
+  <div id="messages"></div>
+  <div id="placeholder">✦ ДОЛГИ AI ✦<span>Напишите сообщение, чтобы начать</span></div>
+  <form id="input-area" autocomplete="off">
+    <textarea id="user-input" rows="1" placeholder="Напишите сообщение…"></textarea>
+    <button id="send-btn" type="submit">➤</button>
+  </form>
+</main>
+
+<input type="file" id="load-file" accept="application/json" hidden>
+<script src="script.js"></script>
+</body>
+</html>
